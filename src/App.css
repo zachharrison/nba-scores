@@ -18,13 +18,13 @@
   justify-content: center;
   width: 75%;
   margin: 10px 0;
+  padding: 20px;
 }
 
 .teams {
   display: flex;
   flex-direction: column;
   width: 70%;
-  border-right: 1px solid #ccc;
   padding: 25px 0;
 }
 
@@ -36,15 +36,29 @@
 }
 
 .logo {
-  margin-right: 5px;
+  margin-right: 15px;
 }
 
 .team-name {
   margin-right: 50px;
+  font-size: 24px;
+}
+.scores {
+  border-right: 1px solid #ccc;
+  margin-right: 25px;
+  padding-right: 30px;
+}
+
+.scores p {
+  font-size: 24px;
 }
 
 .clock {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.clock p {
+  text-align: center;
 }

@@ -7,13 +7,15 @@ const Game = () => {
         <div className='team'>
           <p className='logo'>logo</p>
           <p className='team-name'>Pelicans</p>
-          <p className='score'>101</p>
         </div>
         <div className='team'>
           <p className='logo'>logo</p>
           <p className='team-name'>76ers</p>
-          <p className='score'>100</p>
         </div>
+      </div>
+      <div className='scores'>
+        <p>101</p>
+        <p>100</p>
       </div>
       <div className='clock'>
         <p>Q4 - 06:56</p>
