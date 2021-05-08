@@ -33,10 +33,13 @@
   align-items: center;
   justify-content: flex-start;
   flex-direction: row;
+  margin-bottom: 10px;
 }
 
 .logo {
   margin-right: 15px;
+  height: 40px;
+  width: 40px;
 }
 
 .team-name {

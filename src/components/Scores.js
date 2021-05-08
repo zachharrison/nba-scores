@@ -3,20 +3,19 @@ import Game from './Game';
 import ScoresContext from '../context/scores/scoresContext';
 
 const Scores = () => {
-  // const scoresContext = useContext(ScoresContext);
-  // const { games, getScores } = scoresContext;
+  const scoresContext = useContext(ScoresContext);
+  const { games, getScores } = scoresContext;
 
-  // useEffect(() => {
-  //   getScores();
-  // }, []);
-
-  const games = [1, 2, 3, 4, 5];
+  useEffect(() => {
+    getScores();
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <ul className='games'>
-      <Game />
-      <Game />
-      <Game />
+      {games.map((game) => (
+        <Game key={game.gameId} game={game} />
+      ))}
     </ul>
   );
 };

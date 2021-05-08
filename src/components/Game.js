@@ -1,24 +1,38 @@
 import React from 'react';
 
-const Game = () => {
+const Game = ({ game }) => {
+  const {
+    clock,
+    currentPeriod,
+    hTeam: {
+      nickName: hName,
+      logo: hLogo,
+      score: { points: hScore },
+    },
+    vTeam: {
+      nickName: vName,
+      logo: vLogo,
+      score: { points: vScore },
+    },
+  } = game;
   return (
     <div className='game'>
       <div className='teams'>
         <div className='team'>
-          <p className='logo'>logo</p>
-          <p className='team-name'>Pelicans</p>
+          <img className='logo' src={hLogo} alt='team-logo' />
+          <p className='team-name'>{hName}</p>
         </div>
         <div className='team'>
-          <p className='logo'>logo</p>
-          <p className='team-name'>76ers</p>
+          <img className='logo' src={vLogo} alt='team-logo' />
+          <p className='team-name'>{vName}</p>
         </div>
       </div>
       <div className='scores'>
-        <p>101</p>
-        <p>100</p>
+        <p>{hScore}</p>
+        <p>{vScore}</p>
       </div>
       <div className='clock'>
-        <p>Q4 - 06:56</p>
+        <p>{`Q${currentPeriod.split('/')[0]} - ${clock}`}</p>
       </div>
     </div>
   );
