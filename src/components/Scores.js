@@ -1,26 +1,21 @@
-import axios from 'axios';
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
+import ScoresContext from '../context/scores/scoresContext';
 
 const Scores = () => {
-  const url = 'https://api-nba-v1.p.rapidapi.com/games/live/';
-  const config = {
-    headers: {
-      'x-rapidapi-key': process.env.REACT_APP_API_KEY,
-      'x-rapidapi-host': 'api-nba-v1.p.rapidapi.com',
-    },
-  };
+  const scoresContext = useContext(ScoresContext);
+  const { games, getScores } = scoresContext;
 
   useEffect(() => {
-    const fetchData = async () => {
-      const scores = await axios.get(url, config);
-
-      console.log(scores);
-    };
-    fetchData();
-    // eslint-disable-next-line
+    getScores();
   }, []);
 
-  return <div>Scores</div>;
+  return (
+    <ul>
+      {games.map((game) => (
+        <li>{game.city}</li>
+      ))}
+    </ul>
+  );
 };
 
 export default Scores;

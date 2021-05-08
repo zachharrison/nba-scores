@@ -2,12 +2,17 @@ import './App.css';
 import Nav from './components/Nav';
 import Scores from './components/Scores';
 
+// CONTEXT
+import ScoresState from './context/scores/ScoresState';
+
 function App() {
   return (
-    <div className='App'>
-      <Nav />
-      <Scores />
-    </div>
+    <ScoresState>
+      <>
+        <Nav />
+        <Scores />
+      </>
+    </ScoresState>
   );
 }
 
