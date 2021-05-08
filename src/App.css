@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.games {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.game {
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+  margin: 10px 0;
+}
+
+.teams {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  border-right: 1px solid #ccc;
+  padding: 25px 0;
+}
+
+.team {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+.logo {
+  margin-right: 5px;
+}
+
+.team-name {
+  margin-right: 50px;
+}
+
+.clock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
