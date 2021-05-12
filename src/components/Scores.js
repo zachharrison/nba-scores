@@ -13,9 +13,11 @@ const Scores = () => {
 
   return (
     <ul className='games'>
-      {games.map((game) => (
-        <Game key={game.gameId} game={game} />
-      ))}
+      {games.length ? (
+        games.map((game) => <Game key={game.gameId} game={game} />)
+      ) : (
+        <h4>There are no games on right now...</h4>
+      )}
     </ul>
   );
 };
